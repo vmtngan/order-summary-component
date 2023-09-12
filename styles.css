@@ -1,0 +1,218 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --bright-blue-hover: hsl(245, 83%, 68%);
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(./fonts/RedHatDisplay-VariableFont_wght.ttf)
+    format("truetype-variations");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--pale-blue);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 327px;
+  background-color: white;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  box-shadow: 0px 40px 40px -20px rgba(12.86, 47.99, 188.5, 0.15);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+
+  .card {
+    max-width: 450px;
+  }
+}
+
+.card__image {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card__heading {
+  color: var(--dark-blue);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 29px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__heading {
+    font-size: 28px;
+    line-height: 37px;
+    margin-top: 45px;
+    margin-bottom: 17px;
+  }
+}
+
+.card__description {
+  max-width: 263px;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__description {
+    max-width: 354px;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+}
+
+.card__pricing {
+  width: 100%;
+  max-width: 279px;
+  background-color: var(--very-pale-blue);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__pricing {
+    max-width: 354px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.card__pricing > div {
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__pricing > div {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.card__pricing > div > img {
+  margin-right: 20px;
+}
+
+.card__pricing > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__pricing span:first-of-type {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.card__pricing > a {
+  color: var(--bright-blue);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__pricing > a {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.card__pricing > a:hover {
+  text-decoration: none;
+  color: var(--bright-blue-hover);
+}
+
+button {
+  cursor: pointer;
+}
+
+.card__cta-btn {
+  width: 100%;
+  max-width: 279px;
+  color: white;
+  background-color: var(--bright-blue);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+  border: 0;
+  border-radius: 11px;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.19);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__cta-btn {
+    max-width: 354px;
+    margin-bottom: 32px;
+  }
+}
+
+.card__cta-btn:hover {
+  background-color: var(--bright-blue-hover);
+}
+
+.card__cancel-btn {
+  color: var(--desaturated-blue);
+  background-color: transparent;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+  border: 0;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__cancel-btn {
+    margin-bottom: 48px;
+  }
+}
+
+.card__cancel-btn:hover {
+  color: var(--dark-blue);
+}

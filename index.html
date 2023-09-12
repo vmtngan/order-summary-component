@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
+  </head>
 
-  Order Summary
+  <body>
+    <main class="card">
+      <img
+        class="card__image"
+        src="./images/illustration-hero.svg"
+        alt="hero image"
+      />
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      <h3 class="card__heading">Order Summary</h3>
 
-  Annual Plan
-  $59.99/year
+      <p class="card__description">
+        You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!
+      </p>
 
-  Change
+      <div class="card__pricing">
+        <div>
+          <img src="./images/icon-music.svg" alt="icon music" />
+          <div>
+            <span>Annual Plan</span>
+            <span>$59.99/year</span>
+          </div>
+        </div>
+        <a href="#">Change</a>
+      </div>
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <button class="card__cta-btn">Proceed to Payment</button>
+
+      <button class="card__cancel-btn">Cancel Order</button>
+    </main>
+  </body>
 </html>
